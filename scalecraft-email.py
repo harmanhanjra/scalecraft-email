@@ -1,5 +1,5 @@
 import os
-os.environ["EXPLABS_API_KEY"] = "xpl_c9f5fc9a36bdb0582e0de141b7bbc5d67e95c74d"
+os.environ.setdefault("EXPLABS_API_KEY", "")  # set your key in the environment, never in code
 from openai import OpenAI
 client = OpenAI(base_url="https://api.experientiallabs.ai/v1", api_key=os.environ["EXPLABS_API_KEY"])
 
